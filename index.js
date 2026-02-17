@@ -48,7 +48,10 @@ globalThis.MessageTimestamp_interceptGeneration = function (chat, _contextSize, 
         return;
     }
     for (const message of chat) {
-        if (typeof message.mes === 'string') {
+        if (Array.isArray(message.extra?.tool_invocations)) {
+            continue;
+        }
+        if (typeof message.mes === 'string' && message.mes.length > 0) {
             const timestamp = timestampToMoment(message.send_date);
             if (timestamp.isValid()) {
                 const formattedTimestamp = timestamp.format(settings.timestampFormat);
