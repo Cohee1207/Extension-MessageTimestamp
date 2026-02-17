@@ -6,9 +6,9 @@ import { t } from '/scripts/i18n.js';
 /**
  * @type {MessageTimestampSettings}
  * @typedef {Object} MessageTimestampSettings
- * @property {boolean} enabled - Whether the extension is enabled.
- * @property {string} timestampFormat - The format for message timestamps.
- * @property {string} messageFormat - The format for the entire message.
+ * @property {boolean} enabled Whether the extension is enabled.
+ * @property {string} timestampFormat The format for message timestamps.
+ * @property {string} messageFormat The format for the entire message.
  */
 const defaultSettings = Object.freeze({
     enabled: false,
